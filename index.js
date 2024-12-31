@@ -9,11 +9,25 @@ app.use(express.json());
 app.set("viws engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-app.set(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 
-app.get("/", (req, res) => {
-    res.send("server working well!");
+let posts = [
+  {
+    username: "max",
+    content: " I Love Coding",
+  },
+  {
+    username: "ray",
+    content: "hard work is important to achieve success",
+  },
+  {
+    username: "kai",
+    content: " I got selected for my 1st internship"
+  },
+];
+app.get("/posts", (req, res) => {
+    res.render("index.ejs", {posts});
 })
 app.listen(port, () => {
     console.log("listening to port ", port);
