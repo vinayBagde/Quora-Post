@@ -1,11 +1,56 @@
 h1 {
-    color: maroon;
+  color: maroon;
 }
 
+h3 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.post-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
 .post {
-    background: blanchedalmond;
+  background: blanchedalmond;
+  border-radius: 14px;
+  padding: 10px;
+  margin: 15px;
+  width: 458px;
+  box-sizing: content-box;
 }
 
 .user {
-    font-style: italic;
+  font-style: italic;
+}
+
+.quora {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+a {
+  text-decoration: none;
+  margin: 10px 20px;
+  color: black;
+  background: white;
+  padding: 8px;
+  border-radius: 14px;
+}
+
+.btn {
+  margin: 15px 0;
+  border: none;
+  background: white;
+  padding: 8px;
+  border-radius: 14px;
+}
+
+#create-post {
+  background: rgb(20, 20, 20);
+  color: white;
+  font-weight: 900;
+  margin-bottom: 15px;
 }
